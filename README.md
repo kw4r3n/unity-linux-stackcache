@@ -109,6 +109,10 @@ foreach (var o in list) UnityEngine.Object.DestroyImmediate(o);
 
 `LD_PRELOAD` の設定を外すだけで元に戻ります。
 
+### AIの利用
+
+原因の調査、コード、このREADMEの作成には AI(Anthropic の Claude Code)を使っています。計測と動作確認は「確認した環境」に書いた環境で、実際に行っています。
+
 ## English
 
 An `LD_PRELOAD` library that fixes `ScriptableObject.CreateInstance` and `Object.Instantiate` being abnormally slow in the Unity Editor on Linux.
@@ -215,3 +219,7 @@ foreach (var o in list) UnityEngine.Object.DestroyImmediate(o);
 ### Removing it
 
 Remove the `LD_PRELOAD` setting.
+
+### Use of AI
+
+The investigation, the code, and this README were made with AI (Anthropic's Claude Code). Measurements and testing were done for real on the environment listed under "Tested on".
