@@ -12,7 +12,7 @@ Linux版Unity Editorで、`ScriptableObject.CreateInstance` と `Object.Instanti
 - VRCFury、NDMF、Modular Avatarなど、アニメーターやアセットを大量に複製するツールのビルドが遅くなる。
 - `new AnimatorState()` のように `new` で作るオブジェクトは速いが、`Instantiate` と `CreateInstance` だけが型を問わず遅い。
 
-ある VRChat アバターでは、プレイモード突入が約15秒から約6.3秒に縮みました。
+ある VRChat アバターでは、プレイモード突入が約15秒から約6.3秒に縮みました。Editor内のすべての処理に効くので、プレイモードだけでなく、アップロード時のビルドやアセットのインポートも速くなります。
 
 ### 原因
 
@@ -119,7 +119,7 @@ An `LD_PRELOAD` library that fixes `ScriptableObject.CreateInstance` and `Object
 - Tools that clone many animator objects or assets, such as VRCFury, NDMF and Modular Avatar, build slowly.
 - Objects created with `new` (for example `new AnimatorState()`) are fast; only `Instantiate` and `CreateInstance` are slow, for every type.
 
-For one VRChat avatar, entering play mode went from about 15 s to about 6.3 s.
+For one VRChat avatar, entering play mode went from about 15 s to about 6.3 s. It applies to everything in the editor, so upload builds and asset imports get faster too, not only play mode.
 
 ### Cause
 
